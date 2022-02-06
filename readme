@@ -1,0 +1,32 @@
+Jacob Drew
+CS 4760
+Project one
+
+How to run program:
+./chain [-h] [-p nprocs] [-c nchars] [-s sleeptime] [-i niters] < textfile
+
+nprocs: Number of processes [default 4]
+nchars: Number of characters read into the buffer [default 80]
+sleeptime: Time to sleep in each iteration [default 3s]
+niters Numbner: of iterations in the loop
+textfile: File containing text to be read through stdin
+
+Description: Program forks processes and demonstrates what happens when a parent process finishes before the child
+
+Observations:
+step 2:
+when ran with input 4, the process ID's increment by one from a starting ID to 4 nubers after that
+So the ID's look like: 100,101,102,103
+
+Step 3:
+Same as step two the process ID's values increment up to the inputed number. 
+The number of adopted processes averages around 60% to 80% at 50 processes inputted.
+The number of processes picked up by init varies. For some runs it may only be 20%.
+There is a large spread in the number of processes being adopted.
+
+Step 4:
+The spread on the number of processes being adopted is lower.
+Now it seems to be a steady 40% to 50% of processes are adopted if 50 processes are inputted
+
+*It is harder to see a difference between steps 3 and 4 at a lower number of processes but depending on the execution, step 4 has less adoptions
+
