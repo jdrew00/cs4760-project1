@@ -42,3 +42,9 @@ Step 6:
 Adding the wait function messes up the iterations. Before all of loop one would print then the next iteration would print.
 Now they are mixed together. It looks like you can execute 100 processes still but that might just be on my environment 
 There aren't any processes adopted by init from what I've seen.
+
+Step 7:
+It is clear all the process id's and parent id's are grouped together. 
+It is hard to see what process is doing what.
+
+Step 8:
