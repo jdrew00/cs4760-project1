@@ -16,12 +16,16 @@ https://www.geeksforgeeks.org/getopt-function-in-c-to-parse-command-line-argumen
 
 int main(int argc, char *argv[])
 {
+    //declare variables
     int opt;
     pid_t childpid = 0;
     int i;
     int n;
-    n=0;
+    n = 0;
     int m,k = 0;
+    // int nchars;
+    // char mybuff[nchars];
+
     // getopt
     while ((opt = getopt(argc, argv, ":p:c:s:i:h")) != -1)
     {
@@ -40,13 +44,15 @@ int main(int argc, char *argv[])
             if(argc==2){
                 exit(0);
             }
-            
             break;
         case 'p':
             n = atoi(optarg);
             printf("input: %d\n", n);
             break;
         case 'c':
+            // nchars = atoi(optarg);
+            // printf("Sleep time: %d\n", nchars);
+            // break;
         case 's':
             m = atoi(optarg);
             printf("Sleep time: %d\n", m);
@@ -75,11 +81,17 @@ int main(int argc, char *argv[])
             wait(NULL);
             // fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n",
             //     i, (long)getpid(), (long)getppid(), (long)childpid);
-
+            
             fprintf(stderr, "i:%d ",  i);
             fprintf(stderr, "process ID:%ld ",  (long)getpid());
             fprintf(stderr, "parent ID:%ld ",  (long)getppid());
             fprintf(stderr, "child ID:%ld\n",  (long)childpid);
+
+            // for(i=1;i<nchars;i++){
+            //     fgets(mybuff, nchars, stdin);
+            // }
+            // mybuff[nchars] = '\0';
+            // fprintf(stderr, "process ID:%ld %s\n",  (long)getpid(), mybuff);
         }
     }
     

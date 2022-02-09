@@ -2,6 +2,10 @@ Jacob Drew
 CS 4760
 Project one
 
+Version Control: https://github.com/jdrew00/cs4760-project1
+
+Description: Program forks processes and demonstrates what happens when a parent process finishes before the child
+
 How to run program:
 ./chain [-h] [-p nprocs] [-c nchars] [-s sleeptime] [-i niters] < textfile
 
@@ -11,7 +15,8 @@ sleeptime: Time to sleep in each iteration [default 3s]
 niters Numbner: of iterations in the loop
 textfile: File containing text to be read through stdin
 
-Description: Program forks processes and demonstrates what happens when a parent process finishes before the child
+Perror:
+I didn't see where perror was needed, none of the system calls threw an error where perror would be needed
 
 Observations:
 step 2:
@@ -48,3 +53,4 @@ It is clear all the process id's and parent id's are grouped together.
 It is hard to see what process is doing what.
 
 Step 8:
+Unable to complete. Was able to define a char array and store input in it but didn't understand how to implement the loop.
