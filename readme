@@ -27,6 +27,13 @@ There is a large spread in the number of processes being adopted.
 Step 4:
 The spread on the number of processes being adopted is lower.
 Now it seems to be a steady 40% to 50% of processes are adopted if 50 processes are inputted
+some runs it is only 30% of processes being adopted
 
 *It is harder to see a difference between steps 3 and 4 at a lower number of processes but depending on the execution, step 4 has less adoptions
+*Increasing the number of processes also seems to increase the percent of processes being adopted
 
+Step 5:
+Introducing more loop iterations and having the program sleep has greatly reduced the number of processed being adopted.
+When the program is ran with 4 second sleep and 5 loop iterations only the last process is adopted.
+That is one out of 20 compared to 10-12 proccesses that we saw in earlier steps
+* it is difficult to see how modifying the sleep and iterations affect this since there is two variables

@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
     int i;
     int n;
     n=0;
-
+    int m,k = 0;
     // getopt
-    while ((opt = getopt(argc, argv, ":p:csif:h")) != -1)
+    while ((opt = getopt(argc, argv, ":p:c:s:i:f:h")) != -1)
     {
         switch (opt)
         {
@@ -47,7 +47,13 @@ int main(int argc, char *argv[])
             break;
         case 'c':
         case 's':
+            m = atoi(optarg);
+            printf("Sleep time: %d\n", m);
+            break;
         case 'i':
+            k = atoi(optarg);
+            printf("Loop iterations time: %d\n", k);
+            break;
         case 'f':
             printf("filename: %s\n", optarg);
             break;
@@ -66,12 +72,12 @@ int main(int argc, char *argv[])
         for (i = 1; i < n; i++)
             if (childpid = fork())
                 break;
-        sleep(10);
-        fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n",
+        for(i=1; i<=k; i++){
+            sleep(m);
+            fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n",
                 i, (long)getpid(), (long)getppid(), (long)childpid);
-        if((long)getppid() == 1012){
-            n=n+1;
         }
+        
     }
     
     return 0;
