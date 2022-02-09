@@ -12,6 +12,7 @@ https://www.geeksforgeeks.org/getopt-function-in-c-to-parse-command-line-argumen
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include<sys/wait.h>
 
 int main(int argc, char *argv[])
 {
@@ -74,6 +75,7 @@ int main(int argc, char *argv[])
                 break;
         for(i=1; i<=k; i++){
             sleep(m);
+            wait(NULL);
             fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n",
                 i, (long)getpid(), (long)getppid(), (long)childpid);
         }

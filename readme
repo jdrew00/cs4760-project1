@@ -37,3 +37,8 @@ Introducing more loop iterations and having the program sleep has greatly reduce
 When the program is ran with 4 second sleep and 5 loop iterations only the last process is adopted.
 That is one out of 20 compared to 10-12 proccesses that we saw in earlier steps
 * it is difficult to see how modifying the sleep and iterations affect this since there is two variables
+
+Step 6:
+Adding the wait function messes up the iterations. Before all of loop one would print then the next iteration would print.
+Now they are mixed together. It looks like you can execute 100 processes still but that might just be on my environment 
+There aren't any processes adopted by init from what I've seen.
